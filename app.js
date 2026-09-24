@@ -57,7 +57,7 @@ async function sendMessage() {
 
     try {
 
-        const response = await fetch("https//indra-ai.2611500012.workers.dev/", {
+        const response = await fetch("https://indra-ai.2611500012.workers.dev/", {
             method: "POST",
 
             headers: {
