@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Indra AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="logo">I</div>
+
+                <div>
+                    <h1>Indra AI</h1>
+                    <span>Personal Assistant</span>
+                </div>
+            </div>
+
+            <button class="new-chat" onclick="newChat()">
+                <span>＋</span>
+                Chat Baru
+            </button>
+
+            <div class="history-title">
+                Riwayat
+            </div>
+
+            <div id="history" class="history"></div>
+
+            <div class="sidebar-bottom">
+
+                <button onclick="toggleTheme()" class="side-button">
+                    🌙 Mode
+                </button>
+
+                <button onclick="clearChat()" class="side-button danger">
+                    🗑 Hapus Chat
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <div class="mobile-brand">
+                    <div class="logo small">I</div>
+                    <strong>Indra AI</strong>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Online
+                </div>
+
+            </header>
+
+
+            <!-- CHAT -->
+            <section id="chat" class="chat">
+
+                <div id="welcome" class="welcome">
+
+                    <div class="welcome-logo">
+                        I
+                    </div>
+
+                    <h2>Halo, saya Indra AI 👋</h2>
+
+                    <p>
+                        Asisten AI pribadi untuk membantu kamu belajar,
+                        membuat kode, mencari ide, dan berbagai hal lainnya.
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button onclick="useSuggestion('Bantu saya belajar coding dari dasar')">
+                            💻 Belajar coding
+                        </button>
+
+                        <button onclick="useSuggestion('Buatkan saya website keren')">
+                            🌐 Membuat website
+                        </button>
+
+                        <button onclick="useSuggestion('Jelaskan apa itu AI dengan sederhana')">
+                            🤖 Tentang AI
+                        </button>
+
+                        <button onclick="useSuggestion('Berikan saya ide project menarik')">
+                            💡 Ide project
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INPUT -->
+            <div class="input-area">
+
+                <div class="input-box">
+
+                    <textarea id="messageInput" placeholder="Tanyakan sesuatu kepada Indra AI..." rows="1"></textarea>
+
+                    <button id="sendButton" class="send-button" onclick="sendMessage()">
+                        ➤
+                    </button>
+
+                </div>
+
+                <div class="input-info">
+                    Indra AI dapat membuat kesalahan. Periksa informasi penting.
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
